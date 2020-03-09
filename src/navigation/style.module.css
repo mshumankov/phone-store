@@ -1,0 +1,60 @@
+.logo {
+    padding: 0.6em 1.4em;
+    border: 2px solid var(--light-gray);
+}
+
+.logo span {
+    font-size: 3.5em;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.logo h3 {
+    display: inline-block;
+}
+
+nav {
+    display: flex;
+    font-family: 'Ubuntu';
+}
+
+ul {
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: block;
+    list-style: none;
+}
+
+a {
+    display: block;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    color: rgb(39, 39, 39);
+    position: relative;
+}
+
+a::after {
+    content: '';
+    opacity: 0;
+    visibility: hidden;
+    height: 3px;
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    right: 10px;
+    margin-top: -3px;
+    background: #da291c;
+    transition: 450ms cubic-bezier(.215, .61, .355, 1);
+}
+
+a:hover::after {
+    visibility: visible;
+    opacity: 1;
+    color: red;
+}
