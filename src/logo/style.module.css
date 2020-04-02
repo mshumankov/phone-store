@@ -1,0 +1,11 @@
+.logo span {
+    font-family: 'Ubuntu';
+    font-size: 3.5em;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.logo h3 {
+    font-family: 'Ubuntu';
+    display: inline-block;
+}

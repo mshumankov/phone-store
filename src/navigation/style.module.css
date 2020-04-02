@@ -1,16 +1,7 @@
-.logo {
+.logo-wrap {
     padding: 0.6em 1.4em;
     border: 2px solid var(--light-gray);
-}
-
-.logo span {
-    font-size: 3.5em;
-    font-weight: bold;
-    color: var(--primary);
-}
-
-.logo h3 {
-    display: inline-block;
+    border-bottom: none;
 }
 
 nav {
@@ -18,19 +9,23 @@ nav {
     font-family: 'Ubuntu';
 }
 
-ul {
+div.wrap {
+    border-bottom: 2px solid var(--light-gray);
+}
+
+nav ul {
     display: flex;
     align-items: flex-end;
     padding: 0;
     margin: 0;
 }
 
-li {
+nav li {
     display: block;
     list-style: none;
 }
 
-a {
+.wrap a {
     display: block;
     font-size: 1.2em;
     text-decoration: none;
@@ -39,7 +34,7 @@ a {
     position: relative;
 }
 
-a::after {
+.wrap a::after {
     content: '';
     opacity: 0;
     visibility: hidden;
@@ -53,7 +48,7 @@ a::after {
     transition: 450ms cubic-bezier(.215, .61, .355, 1);
 }
 
-a:hover::after {
+.wrap a:hover::after {
     visibility: visible;
     opacity: 1;
     color: red;

@@ -1,11 +1,14 @@
 import React, { Fragment } from 'react';
 import Navigation from '../navigation/';
+import PhoneList from '../phoneList';
+import Footer from '../footer/';
 
 const ProductList = () => {
     return (
         <Fragment>
             <Navigation />
-            <p>test</p>
+            <PhoneList />
+            <Footer />
         </Fragment>
     )
 }

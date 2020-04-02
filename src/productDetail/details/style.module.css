@@ -1,0 +1,76 @@
+.container {
+    display: flex;
+    margin: 6rem auto;
+    justify-content: center;
+}
+
+.container figure {
+    padding: 3rem 0rem;
+    max-width: 60%;
+}
+
+.container img {
+    max-width: 100%;
+}
+
+.description {
+    padding: 3rem 0rem 3rem 3rem;
+}
+
+.container h1 {
+    font-weight: normal;
+    font-size: 3.5rem;
+}
+
+.prices {
+    display: flex;
+}
+
+.priceText {
+    font-size: 16px;
+    padding-bottom: 0.3rem;
+}
+
+.perMonth {
+    padding-right: 2rem;
+}
+
+.priceYear {
+    padding-left: 2rem;
+    border-left: 1px solid black;
+}
+
+.container ul {
+    padding-left: 0;
+    margin-top: 3rem;
+    list-style: none;
+}
+
+.container li {
+    position: relative;
+    margin: 6px 0;
+    padding-left: 28px;
+    font-size: 20px;
+}
+
+.container li:before {
+    content: '•';
+    color: #d7d7d7;
+    font-size: 35px;
+    position: absolute;
+    left: 0px;
+    top: -11px;
+}
+
+.btn button {
+    background-color: #fff;
+    border: 1px solid var(--primary);
+    padding: 11px 13px;
+    cursor: pointer;
+}
+
+.btn span {
+    vertical-align: middle;
+    font-size: 21px;
+    margin: 0 15px;
+}
