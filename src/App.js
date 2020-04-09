@@ -5,17 +5,20 @@ import ProductList from './productList';
 import ProductDetail from './productDetail';
 import Login from './login';
 import Register from './register';
+import AuthProvider from './authentication/Auth';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path='/' exact component={ProductList} />
-        <Route path='/phone/:id' component={ProductDetail} />
-        <Route path='/login' component={Login} />
-        <Route path='/register' component={Register} />
-      </Switch>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Switch>
+          <Route path='/' exact component={ProductList} />
+          <Route path='/phone/:id' component={ProductDetail} />
+          <Route path='/login' component={Login} />
+          <Route path='/register' component={Register} />
+        </Switch>
+      </Router>
+    </AuthProvider>
   );
 }
 

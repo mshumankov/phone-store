@@ -92,7 +92,7 @@
 
 .button-wrap {
     display: flex;
-    padding: 2rem 0 2rem 0;
+    padding: 3rem 0 2rem 0;
     align-items: flex-end;
     justify-content: space-between;
 }
@@ -110,4 +110,10 @@
     padding: 1rem 0;
     border-top: 1px solid var(--light-gray);
     max-width: 24rem;
+}
+
+.error-message {
+    position: absolute;
+    color: var(--primary);
+    font-style: italic;
 }

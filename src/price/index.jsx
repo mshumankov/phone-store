@@ -14,7 +14,7 @@ const Price = (props) => {
         const price = props.priceAll - 1;
         return price;
     }
-    console.log(props.priceAll);
+
     return (
         <Fragment>
             {props.priceMonth ? (

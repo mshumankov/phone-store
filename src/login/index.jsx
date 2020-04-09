@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Logo from '../logo';
+import useFormControl from '../customHooks/formControl';
+import fire from '../config/fire';
 import { Link } from 'react-router-dom';
 import form from '../sharedStyles/form.module.css';
 import { FaEye } from 'react-icons/fa';
@@ -8,9 +10,12 @@ import picture from '../images/girlWithPhone.jpg'
 
 
 
-const Login = () => {
+const Login = ({ history }) => {
 
-    const [passwordView, changePassword] = useState('password')
+    const [passwordView, changePassword] = useState('password');
+    const emailFormControl = useFormControl();
+    const passwordFormControl = useFormControl();
+    console.log(history);
 
     const changePasswordView = () => {
         if (passwordView === 'password') {
@@ -20,7 +25,28 @@ const Login = () => {
         }
     }
 
+    const viewError = () => {
+        if (emailFormControl.error) {
+            return emailFormControl.error;
+        } else if (passwordFormControl.error) {
+            return passwordFormControl.error;
+        } else {
+            return null;
+        }
+    }
 
+    const submitHandler = async () => {
+        if ((!emailFormControl.error && !passwordFormControl.error) && (emailFormControl.value && passwordFormControl.value)) {
+            try {
+                await fire
+                    .auth()
+                    .signInWithEmailAndPassword(emailFormControl.value, passwordFormControl.value);
+                history.push('/');
+            } catch (error) {
+                console.log(error);;
+            }
+        }
+    }
 
     return (
         <div className={form.container}>
@@ -34,21 +60,22 @@ const Login = () => {
                         <form>
                             <h2>Sign in to M22</h2>
                             <div className={form['form-control']}>
-                                <label>Username:</label>
-                                <input type='text' />
+                                <label>E-mail:</label>
+                                <input type='email' name='email' onChange={emailFormControl.changeHandler} />
                             </div>
                             <div className={form['form-control']}>
                                 <label>Password:</label>
-                                <input type={passwordView} />
+                                <input type={passwordView} name='password' onChange={passwordFormControl.changeHandler} />
                                 <span onClick={changePasswordView}>< FaEye /></span>
                             </div>
+                            <div className={form['error-message']}>{viewError()}</div>
                             <div className={form['button-wrap']}>
                                 <div className={form['form-button']}>
-                                    <button className='react-icons-btn-form' type='submit'><span>Sign In</span><MdKeyboardArrowRight /></button>
+                                    <button className='react-icons-btn-form' type='button' onClick={submitHandler}><span>Sign In</span><MdKeyboardArrowRight /></button>
                                 </div>
                                 <div className={form['form-link']}>
                                     <span>Do you have an M22 account?</span>
-                                    <Link to='/'>Sign up</Link>
+                                    <Link to='/register'>Sign up</Link>
                                 </div>
                             </div>
                         </form>

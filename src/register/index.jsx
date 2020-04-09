@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Logo from '../logo';
+import useFormControl from '../customHooks/formControl';
+import fire from '../config/fire';
 import { Link } from 'react-router-dom';
 import form from '../sharedStyles/form.module.css';
 import { FaEye } from 'react-icons/fa';
@@ -8,15 +10,62 @@ import picture from '../images/girlWithPhone2.jpg'
 
 
 
-const Register = () => {
+const Register = ({ history }) => {
 
-    const [passwordView, changePassword] = useState('password')
+    const [passwordView, changePassword] = useState('password');
+    const [rePasswordView, changeRePassword] = useState('password');
+    const [rePasswordValue, changeRePasswordValue] = useState(undefined);
+    const emailFormControl = useFormControl();
+    const passwordFormControl = useFormControl();
+
+    const rePasword = (e) => {
+        const value = e.target.value
+        changeRePasswordValue(value);
+    }
+
+    console.log(emailFormControl, passwordFormControl);
 
     const changePasswordView = () => {
         if (passwordView === 'password') {
             changePassword('text')
         } else {
             changePassword('password')
+        }
+    }
+
+    const changeRePasswordView = () => {
+        if (rePasswordView === 'password') {
+            changeRePassword('text')
+        } else {
+            changeRePassword('password')
+        }
+    }
+
+    const viewError = () => {
+        if (emailFormControl.error) {
+            return emailFormControl.error;
+        } else if (passwordFormControl.error) {
+            return passwordFormControl.error;
+        } else if (rePasswordValue && (passwordFormControl.value !== rePasswordValue)) {
+            console.log(passwordFormControl.value, rePasswordValue);
+            return 'Passwords don\'t match';
+
+        }
+        else {
+            return null;
+        }
+    }
+
+    const submitHandler = async () => {
+        if ((!emailFormControl.error && !passwordFormControl.error) && (emailFormControl.value && passwordFormControl.value)) {
+            try {
+                await fire
+                    .auth()
+                    .createUserWithEmailAndPassword(emailFormControl.value, passwordFormControl.value);
+                history.push('/');
+            } catch (error) {
+                console.log(error);;
+            }
         }
     }
 
@@ -34,25 +83,27 @@ const Register = () => {
                         <form>
                             <h2>Create your account</h2>
                             <div className={form['form-control']}>
-                                <label>Username:</label>
-                                <input type='text' />
-                            </div>
-                            <div className={form['form-control']}>
                                 <label>E-mail:</label>
-                                <input type='email' />
+                                <input type='email' name='email' onChange={emailFormControl.changeHandler} />
                             </div>
                             <div className={form['form-control']}>
                                 <label>Password:</label>
-                                <input type={passwordView} />
+                                <input type={passwordView} name='password' onChange={passwordFormControl.changeHandler} />
                                 <span onClick={changePasswordView}>< FaEye /></span>
                             </div>
+                            <div className={form['form-control']}>
+                                <label>Repeat password:</label>
+                                <input type={rePasswordView} onChange={rePasword} />
+                                <span onClick={changeRePasswordView} >< FaEye /></span>
+                            </div>
+                            <div className={form['error-message']}>{viewError()}</div>
                             <div className={form['button-wrap']}>
                                 <div className={form['form-button']}>
-                                    <button className='react-icons-btn-form' type='submit'><span>Sign Up</span><MdKeyboardArrowRight /></button>
+                                    <button className='react-icons-btn-form' type='button' onClick={submitHandler}><span>Sign Up</span><MdKeyboardArrowRight /></button>
                                 </div>
                                 <div className={form['form-link']}>
                                     <span>Already have an account?</span>
-                                    <Link to='/'>Sign in</Link>
+                                    <Link to='/login'>Sign in</Link>
                                 </div>
                             </div>
                         </form>

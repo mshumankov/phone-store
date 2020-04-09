@@ -25,7 +25,7 @@ nav li {
     list-style: none;
 }
 
-.wrap a {
+.wrap a, .wrap button {
     display: block;
     font-size: 1.2em;
     text-decoration: none;
@@ -34,7 +34,7 @@ nav li {
     position: relative;
 }
 
-.wrap a::after {
+.wrap a::after, .wrap button::after {
     content: '';
     opacity: 0;
     visibility: hidden;
@@ -48,8 +48,14 @@ nav li {
     transition: 450ms cubic-bezier(.215, .61, .355, 1);
 }
 
-.wrap a:hover::after {
+.wrap a:hover::after, .wrap button:hover::after {
     visibility: visible;
     opacity: 1;
     color: red;
+}
+
+.wrap button {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
 }

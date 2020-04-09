@@ -15,11 +15,10 @@ const PhoneList = () => {
                 phoneInfo.id = phone;
                 dataArr.push(phoneInfo);
             }
-            console.log('useEffect');
             getPhones(dataArr);
         })
 
-    }, [])
+    }, []);
 
     let phoneList = phones.map((phone) => <PhoneCard phoneInfo={phone} key={phone.id} />)
 
