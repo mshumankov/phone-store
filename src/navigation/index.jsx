@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import fire from '../config/fire';
+import { AuthContext } from '../authentication/Auth';
 import style from './style.module.css';
 import { withRouter } from "react-router";
 import { Link } from 'react-router-dom';
 import Logo from '../logo';
 
+
+
 const Navigation = ({ history }) => {
+
+    const { currentUser } = useContext(AuthContext);
 
     const signOut = async () => {
         try {
@@ -25,9 +30,16 @@ const Navigation = ({ history }) => {
                 </div>
                 <ul>
                     <li><Link to={'/'}>Smartphones</Link></li>
-                    <li><Link to={'/login'}>Login</Link></li>
-                    <li><Link to={'/register'}>Register</Link></li>
-                    <li><button onClick={signOut}>Sign out</button></li>
+                    {!currentUser ? (
+                        <li><Link to={'/login'}>Login</Link></li>
+                    ) : null}
+                    {!currentUser ? (
+                        <li><Link to={'/register'}>Sign Up</Link></li>
+                    ) : null}
+                    {!!currentUser ? (
+                        <li><button onClick={signOut}>Sign out</button></li>
+                    ) : null}
+
                     <li><a href="#">Test</a></li>
                 </ul>
             </nav>

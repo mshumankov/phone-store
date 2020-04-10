@@ -15,7 +15,6 @@ const Login = ({ history }) => {
     const [passwordView, changePassword] = useState('password');
     const emailFormControl = useFormControl();
     const passwordFormControl = useFormControl();
-    console.log(history);
 
     const changePasswordView = () => {
         if (passwordView === 'password') {

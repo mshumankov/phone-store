@@ -6,6 +6,7 @@ import ProductDetail from './productDetail';
 import Login from './login';
 import Register from './register';
 import AuthProvider from './authentication/Auth';
+import ProtectedRoute from './protectedRoute/protectedRoute';
 
 function App() {
   return (
@@ -14,8 +15,8 @@ function App() {
         <Switch>
           <Route path='/' exact component={ProductList} />
           <Route path='/phone/:id' component={ProductDetail} />
-          <Route path='/login' component={Login} />
-          <Route path='/register' component={Register} />
+          <ProtectedRoute path='/login' component={Login} />
+          <ProtectedRoute path='/register' component={Register} />
         </Switch>
       </Router>
     </AuthProvider>
