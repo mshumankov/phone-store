@@ -1,0 +1,24 @@
+.createComment {
+    text-align: center;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--light-gray);
+    position: relative;
+}
+
+.createComment textarea {
+    resize: none;
+    overflow: hidden;
+    width: 90%;
+    margin: 2rem 1rem 3rem;
+    border: 1px solid var(--light-gray);
+    padding: 0.5rem 1rem
+}
+
+.createComment textarea:focus {
+    border: 1px solid var(--primary);
+}
+
+.error {
+    margin-bottom: 1rem;
+    color: var(--primary);
+}

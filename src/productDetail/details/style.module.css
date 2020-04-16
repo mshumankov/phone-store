@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    margin: 6rem auto;
+    margin: 6rem auto 3rem;
     justify-content: center;
 }
 

@@ -1,10 +1,13 @@
 import React, { useState, useContext } from 'react';
 import phoneService from '../../services/services';
 import { AuthContext } from '../../authentication/Auth';
+import style from './style.module.css';
+import { MdKeyboardArrowRight } from 'react-icons/md';
 
 const CreateComment = ({ phoneData }) => {
     const { currentUser } = useContext(AuthContext);
     const [message, getMessage] = useState(undefined);
+    const [error, getError] = useState('');
     const phone = phoneData.name;
 
     const messageHandler = e => {
@@ -26,8 +29,8 @@ const CreateComment = ({ phoneData }) => {
             } catch (error) {
                 console.log(error);
             }
-
-
+        } else {
+            getError('You need to sign in to post your comment. Please sign in.');
         }
     }
 
@@ -37,9 +40,12 @@ const CreateComment = ({ phoneData }) => {
     }
 
     return (
-        <div>
-            <textarea onChange={messageHandler}></textarea>
-            <button type='button' onClick={submitHandler}>Submit</button>
+        <div className={style.createComment}>
+            <h3>Post your comment, review about {phone}</h3>
+            <textarea onChange={messageHandler} placeholder="Your opinion" cols="30" rows="5"></textarea>
+            <div className={style.error}>{error}</div>
+            <div><button type='button' onClick={submitHandler} className='react-icons-btn-form'><span>Submit</span><MdKeyboardArrowRight /></button></div>
+
         </div>
     )
 }
