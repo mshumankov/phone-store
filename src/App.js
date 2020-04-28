@@ -5,6 +5,7 @@ import ProductList from './productList';
 import ProductDetail from './productDetail';
 import Login from './login';
 import Register from './register';
+import ShoppingCart from './shoppingCart';
 import AuthProvider from './authentication/Auth';
 import ProtectedRoute from './protectedRoute/protectedRoute';
 
@@ -17,6 +18,7 @@ function App() {
           <Route path='/phone/:id' component={ProductDetail} />
           <ProtectedRoute path='/login' component={Login} />
           <ProtectedRoute path='/register' component={Register} />
+          <Route path='/shoppingCart' component={ShoppingCart} />
         </Switch>
       </Router>
     </AuthProvider>

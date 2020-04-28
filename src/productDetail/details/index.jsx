@@ -1,11 +1,41 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import phoneService from '../../services/services';
 import style from './style.module.css';
 import '../../index.css';
+import { useHistory } from "react-router-dom"
 import { IconContext } from 'react-icons';
+import { AuthContext } from '../../authentication/Auth';
 import { MdShoppingCart, MdKeyboardArrowRight } from 'react-icons/md';
 import Price from '../../price';
 
 const Details = ({ data }) => {
+
+    const { currentUser } = useContext(AuthContext);
+    const history = useHistory();
+
+    const addToCart = async () => {
+        if (currentUser) {
+            try {
+                const cartInfo = {
+                    email: currentUser.email,
+                    image: data.image,
+                    phone: data.name,
+                    price: data.price,
+                    memory: data.memory
+                }
+                await phoneService.addShoppingCart(cartInfo);
+                await history.push('/');
+                console.log(cartInfo);
+            } catch (error) {
+                console.log(error);
+
+            }
+        }
+        console.log(data, currentUser);
+
+    }
+
+    console.log(history);
 
     return (
         <IconContext.Provider value={{ className: 'react-icons-btn-shop' }}>
@@ -38,7 +68,7 @@ const Details = ({ data }) => {
                             </ul>
                         </div>
                         <div className={style.btn}>
-                            <button><MdShoppingCart /><span>Add to card</span><MdKeyboardArrowRight /></button>
+                            <button onClick={addToCart}><MdShoppingCart /><span>Add to cart</span><MdKeyboardArrowRight /></button>
                         </div>
                     </div>
                 </div>

@@ -34,11 +34,6 @@ const CreateComment = ({ phoneData }) => {
         }
     }
 
-    if (currentUser) {
-        console.log(currentUser.email);
-        console.log(phone);
-    }
-
     return (
         <div className={style.createComment}>
             <h3>Post your comment, review about {phone}</h3>

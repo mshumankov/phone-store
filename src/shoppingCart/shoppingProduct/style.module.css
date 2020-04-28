@@ -1,0 +1,63 @@
+.product-wrap {
+    border-top: 1px solid var(--light-gray);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.image-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-wrap div {
+    max-width: 11rem;
+}
+
+.image-wrap img {
+    width: 100%;
+}
+
+.image-wrap figcaption {
+    margin: 0.5rem 1.5rem
+}
+
+.payment-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.payment-wrap div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.payment-wrap div:last-child {
+    border-left: 1px solid var(--light-gray);
+}
+
+.payment-button-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.payment-button-wrap button {
+    padding: 2px 12px 4px 12px;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: 'Ubuntu';
+    background-color: #fff;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.payment-wrap div p:last-child {
+    font-size: 1.5rem;
+}
+
+.payment-wrap div p:last-child span {
+    font-size: 1rem;
+}

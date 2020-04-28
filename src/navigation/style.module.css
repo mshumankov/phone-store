@@ -6,7 +6,29 @@
 
 nav {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     font-family: 'Ubuntu';
+}
+
+.nav-content {
+    display: flex;
+}
+
+.username {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
+
+.username p {
+    padding-bottom: 0;
+}
+
+.username p:last-child {
+    font-weight: bold;
+    padding-bottom: 1rem;
 }
 
 div.wrap {

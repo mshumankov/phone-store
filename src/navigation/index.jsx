@@ -22,26 +22,42 @@ const Navigation = ({ history }) => {
 
     }
 
+    const getUserName = () => {
+        const username = currentUser.email.split('@')[0];
+        return username
+    }
+
     return (
         <div className={style.wrap}>
             <nav className="page-wrap">
-                <div className={style['logo-wrap']}>
-                    <Logo />
-                </div>
-                <ul>
-                    <li><Link to={'/'}>Smartphones</Link></li>
-                    {!currentUser ? (
-                        <li><Link to={'/login'}>Login</Link></li>
-                    ) : null}
-                    {!currentUser ? (
-                        <li><Link to={'/register'}>Sign Up</Link></li>
-                    ) : null}
-                    {!!currentUser ? (
-                        <li><button onClick={signOut}>Sign out</button></li>
-                    ) : null}
+                <div className={style['nav-content']}>
+                    <div className={style['logo-wrap']}>
+                        <Logo />
+                    </div>
+                    <ul>
+                        <li><Link to={'/'}>Smartphones</Link></li>
+                        {!currentUser ? (
+                            <li><Link to={'/login'}>Login</Link></li>
+                        ) : null}
+                        {!currentUser ? (
+                            <li><Link to={'/register'}>Sign Up</Link></li>
+                        ) : null}
+                        {!!currentUser ? (
+                            <li><button onClick={signOut}>Sign out</button></li>
+                        ) : null}
+                        {!!currentUser ? (
+                            <li><Link to={'/shoppingCart'}>Shopping Cart</Link></li>
+                        ) : null}
 
-                    <li><a href="#">Test</a></li>
-                </ul>
+                    </ul>
+                </div>
+                {!!currentUser ? (
+                    <div className={style.username}>
+                        <p>Sign in as,</p>
+                        <p>{getUserName()}</p>
+                    </div>
+                ) : null}
+
             </nav>
         </div>
     )
