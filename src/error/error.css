@@ -1,0 +1,158 @@
+.wrap-error {
+    background: var(--primary);
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+._404 {
+    font-size: 12rem;
+    position: relative;
+    letter-spacing: 15px;
+    z-index: 2;
+    display: inline-block;
+    line-height: 115%;
+}
+
+._1 {
+    display: block;
+    position: relative;
+    letter-spacing: 12px;
+    font-size: 4rem;
+    line-height: 100%;
+    border-top: 0.3rem solid white;
+}
+
+._2 {
+    display: block;
+    position: relative;
+    font-size: 1.2rem;
+}
+
+.btn {
+    width: 22.5rem;
+    border: none;
+    background-color: white;
+    font-size: 1.7rem;
+    padding: 0.4rem;
+    color: var(--primary);
+    cursor: pointer;
+    position: relative;
+}
+
+.cloud {
+    width: 16.5rem;
+    height: 5.3rem;
+    background: #fff;
+    /* background: linear-gradient(to bottom, #fff, rgb(123, 223, 253)); */
+    border-radius: 100px;
+    position: absolute;
+    margin: 4rem auto 1rem;
+    z-index: 0;
+    transition: ease 2s;
+}
+
+.cloud:after, .cloud:before {
+    content: '';
+    position: absolute;
+    background: #FFF;
+    z-index: 0
+}
+
+.cloud:after {
+    width: 5rem;
+    height: 9rem;
+    top: -2.5rem;
+    left: 3rem;
+    border-radius: 100px;
+}
+
+.cloud:before {
+    width: 8rem;
+    height: 11rem;
+    top: -3.5rem;
+    left: 6rem;
+    border-radius: 100px;
+}
+
+.x1 {
+    top: 12vh;
+    left: 95vw;
+    transform: scale(0.3);
+    opacity: 0.9;
+    animation: movecloudsMiddle 15s linear infinite;
+}
+
+.x1_5 {
+    top: 15vh;
+    left: 95vw;
+    transform: scale(0.5);
+    opacity: 0.65;
+    animation: movecloudsStart 19s linear infinite;
+}
+
+.x2 {
+    top: 32vh;
+    left: 95vw;
+    transform: scale(0.7);
+    opacity: 0.85;
+    animation: movecloudsStart 28s linear infinite;
+}
+
+.x3 {
+    top: 52vh;
+    left: 95vw;
+    transform: scale(0.9);
+    opacity: 0.8;
+    animation: movecloudsMiddle 21s linear infinite;
+}
+
+.x4 {
+    top: 70vh;
+    left: 95vw;
+    transform: scale(0.8);
+    opacity: 0.7;
+    animation: movecloudsStart 22s linear infinite;
+}
+
+.x5 {
+    top: 5vh;
+    left: 95vw;
+    opacity: 0.75;
+    animation: movecloudsMiddle 27s linear infinite;
+}
+
+.x6 {
+    top: 60vh;
+    left: 95vw;
+    transform: scale(0.4);
+    opacity: 0.9;
+    animation: movecloudsStart 40s linear infinite;
+}
+
+@keyframes movecloudsStart {
+    0% {
+        left: 95vw;
+    }
+    100% {
+        left: 10vw;
+    }
+}
+
+@keyframes movecloudsMiddle {
+    0% {
+        left: 75vw;
+    }
+    100% {
+        left: -10vw;
+    }
+}

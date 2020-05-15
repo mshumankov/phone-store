@@ -8,6 +8,9 @@ import Register from './register';
 import ShoppingCart from './shoppingCart';
 import AuthProvider from './authentication/Auth';
 import ProtectedRoute from './protectedRoute/protectedRoute';
+import Error from './error';
+import AboutUs from './abooutUs';
+import Compare from './compare';
 
 function App() {
   return (
@@ -15,10 +18,13 @@ function App() {
       <Router>
         <Switch>
           <Route path='/' exact component={ProductList} />
-          <Route path='/phone/:id' component={ProductDetail} />
-          <ProtectedRoute path='/login' component={Login} />
-          <ProtectedRoute path='/register' component={Register} />
-          <Route path='/shoppingCart' component={ShoppingCart} />
+          <Route path='/phone/:id' exact component={ProductDetail} />
+          <ProtectedRoute path='/login' exact component={Login} />
+          <ProtectedRoute path='/register' exact component={Register} />
+          <Route path='/shoppingCart' exact component={ShoppingCart} />
+          <Route path='/aboutUs' exact component={AboutUs} />
+          <Route path='/compare' exact component={Compare} />
+          <Route component={Error} />
         </Switch>
       </Router>
     </AuthProvider>

@@ -37,7 +37,7 @@ const Navigation = ({ history }) => {
                     <ul>
                         <li><Link to={'/'}>Smartphones</Link></li>
                         {!currentUser ? (
-                            <li><Link to={'/login'}>Login</Link></li>
+                            <li><Link to={'/login'}>Sign in</Link></li>
                         ) : null}
                         {!currentUser ? (
                             <li><Link to={'/register'}>Sign Up</Link></li>
@@ -48,6 +48,8 @@ const Navigation = ({ history }) => {
                         {!!currentUser ? (
                             <li><Link to={'/shoppingCart'}>Shopping Cart</Link></li>
                         ) : null}
+                        <li><Link to={'/compare'}>Compare</Link></li>
+                        <li><Link to={'/aboutUs'}>About us</Link></li>
 
                     </ul>
                 </div>

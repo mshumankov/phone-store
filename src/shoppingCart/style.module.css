@@ -33,3 +33,27 @@
 .btn-payment button {
     margin: 2rem;
 }
+
+.cart-presentation {
+    height: 34rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: url('../images/phoneNight.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.cart-presentation div {
+    display: inline-block;
+    margin: 2rem;
+    padding: 1rem 2rem;
+    background: #fff;
+}
+
+.cart-presentation p {
+    padding-bottom: 0.5rem;
+    ;
+}

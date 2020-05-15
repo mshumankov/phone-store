@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import phoneService from '../../services/services';
 import style from './style.module.css';
 import '../../index.css';
@@ -12,6 +12,7 @@ const Details = ({ data }) => {
 
     const { currentUser } = useContext(AuthContext);
     const history = useHistory();
+    const [errorMessage, getErrorMessage] = useState();
 
     const addToCart = async () => {
         if (currentUser) {
@@ -30,12 +31,12 @@ const Details = ({ data }) => {
                 console.log(error);
 
             }
+        } else {
+            getErrorMessage('You need to sign in to use shopping cart. Please sign in')
         }
         console.log(data, currentUser);
 
     }
-
-    console.log(history);
 
     return (
         <IconContext.Provider value={{ className: 'react-icons-btn-shop' }}>
@@ -69,6 +70,9 @@ const Details = ({ data }) => {
                         </div>
                         <div className={style.btn}>
                             <button onClick={addToCart}><MdShoppingCart /><span>Add to cart</span><MdKeyboardArrowRight /></button>
+                        </div>
+                        <div className={style['error-message']}>
+                            <p>{errorMessage}</p>
                         </div>
                     </div>
                 </div>

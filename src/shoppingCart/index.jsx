@@ -100,6 +100,12 @@ const ShoppingCart = () => {
     return (
         <Fragment>
             <Navigation />
+            <section className={style['cart-presentation']}>
+                <div>
+                    <h2>Power up with M22 Financing</h2>
+                    <p>Buy the latest phones with M22 Financing. With convenient terms up to 12 months at 5% APR.</p>
+                </div>
+            </section>
             <div className='page-wrap'>
                 <section className={style.header}>
                     <h1>Shopping Cart</h1>

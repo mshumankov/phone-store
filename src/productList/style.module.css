@@ -1,0 +1,36 @@
+.home-presentation div {
+    height: 34rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: all 1250ms cubic-bezier(.215, .61, .355, 1);
+}
+
+.home-presentation div div {
+    height: auto;
+    display: inline-block;
+    margin: 2rem;
+    padding: 1rem 2rem;
+    background: #fff;
+}
+
+.home-presentation h1 {
+    width: 16rem;
+    padding-bottom: 0;
+}
+
+.picture-1 {
+    background: url('../images/phoneHand1.jpg');
+}
+
+.picture-2 {
+    background: url('../images/phoneHand2.jpg');
+}
+
+.picture-3 {
+    background: url('../images/phoneHand3.jpg');
+}
