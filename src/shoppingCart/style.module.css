@@ -27,7 +27,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 2rem 0
+    padding: 2rem 0;
+    border-top: 1px solid var(--light-gray);
 }
 
 .btn-payment button {
@@ -56,4 +57,23 @@
 .cart-presentation p {
     padding-bottom: 0.5rem;
     ;
+}
+
+.success-message {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(82, 82, 82, 0.8);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    color: white;
+    transition: all 1250ms cubic-bezier(.215, .61, .355, 1);
+}
+
+.success-message p {
+    font-size: 2rem;
+    padding: 2rem 3rem;
+    border: 2px solid white;
 }

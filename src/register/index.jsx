@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 import form from '../sharedStyles/form.module.css';
 import { FaEye } from 'react-icons/fa';
 import { MdKeyboardArrowRight, MdCheck } from 'react-icons/md';
-import picture from '../images/girlWithPhone2.jpg'
+import picture from '../images/girlWithPhone2.jpg';
+import Footer from '../footer/';
 
 
 
@@ -23,7 +24,6 @@ const Register = ({ history }) => {
         changeRePasswordValue(value);
     }
 
-    console.log(emailFormControl, passwordFormControl);
 
     const changePasswordView = () => {
         if (passwordView === 'password') {
@@ -47,9 +47,7 @@ const Register = ({ history }) => {
         } else if (passwordFormControl.error) {
             return passwordFormControl.error;
         } else if (rePasswordValue && (passwordFormControl.value !== rePasswordValue)) {
-            console.log(passwordFormControl.value, rePasswordValue);
             return 'Passwords don\'t match';
-
         }
         else {
             return null;
@@ -68,8 +66,6 @@ const Register = ({ history }) => {
             }
         }
     }
-
-
 
     return (
         <div className={form.container}>
@@ -120,8 +116,8 @@ const Register = ({ history }) => {
                         </ul>
                     </figure>
                 </section>
-
             </div>
+            <Footer />
         </div>
     )
 }

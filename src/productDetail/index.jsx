@@ -1,5 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
-import style from './style.module.css';
+import React, { useState, useEffect, Fragment, useMemo } from 'react';
 import phoneService from '../services/services';
 import getData from '../services/getData';
 import Navigation from '../navigation/';
@@ -20,7 +19,7 @@ const ProductDetail = (props) => {
 
     }, [])
 
-    const currentPhone = phones.filter((phone) => phone.id === props.match.params.id)[0];
+    const currentPhone = useMemo(() => phones.filter((phone) => phone.id === props.match.params.id)[0], [phones, props.match.params.id]);
 
     return (
         currentPhone ? <Fragment>

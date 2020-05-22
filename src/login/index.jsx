@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 import form from '../sharedStyles/form.module.css';
 import { FaEye } from 'react-icons/fa';
 import { MdKeyboardArrowRight, MdCheck } from 'react-icons/md';
-import picture from '../images/girlWithPhone.jpg'
+import picture from '../images/girlWithPhone.jpg';
+import Footer from '../footer/';
 
 
 
@@ -91,8 +92,8 @@ const Login = ({ history }) => {
                         </ul>
                     </figure>
                 </section>
-
             </div>
+            <Footer />
         </div>
     )
 }

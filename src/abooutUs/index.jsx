@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
 import style from './style.module.css';
-import Map from './map'
-import Navigation from '../navigation'
+import Map from './map';
+import Navigation from '../navigation';
+import Footer from '../footer/';
 
 const AboutUs = () => {
     return (
@@ -60,6 +61,7 @@ const AboutUs = () => {
                 </div>
             </section>
             <Map />
+            <Footer />
         </Fragment>
 
     )

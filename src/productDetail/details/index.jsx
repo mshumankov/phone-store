@@ -26,15 +26,12 @@ const Details = ({ data }) => {
                 }
                 await phoneService.addShoppingCart(cartInfo);
                 await history.push('/');
-                console.log(cartInfo);
             } catch (error) {
                 console.log(error);
-
             }
         } else {
             getErrorMessage('You need to sign in to use shopping cart. Please sign in')
         }
-        console.log(data, currentUser);
 
     }
 
@@ -81,4 +78,4 @@ const Details = ({ data }) => {
     )
 }
 
-export default Details;
+export default React.memo(Details);

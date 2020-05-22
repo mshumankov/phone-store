@@ -9,7 +9,6 @@ const Product = ({ productInfo, getRemoveProduct }) => {
         try {
             await phoneService.removeShoppingCartProduct(productInfo.id);
             await getRemoveProduct(productInfo.id);
-            console.log('done');
         } catch (error) {
             console.log(error);
         }

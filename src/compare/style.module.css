@@ -26,6 +26,10 @@
     border-bottom: 1px solid var(--light-gray);
 }
 
+.section-wrap {
+    margin: 2rem 0 4rem;
+}
+
 .compare-wrap p {
     padding: 0;
 }
@@ -57,6 +61,11 @@
 .search input {
     padding: 0.4rem;
     margin-top: 1rem;
+    border: 1px solid rgb(75, 75, 75);
+}
+
+.search input:focus {
+    border-color: var(--primary);
 }
 
 .phone-list {

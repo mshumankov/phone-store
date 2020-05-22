@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import phoneService from '../services/services';
 import getData from '../services/getData';
 import Comment from './comment';
@@ -7,6 +7,7 @@ import style from './style.module.css';
 
 const Comments = ({ data }) => {
     const [comments, getComments] = useState([]);
+    const [newComment, getNewComment] = useState(0);
 
     useEffect(() => {
         phoneService.loadComments().then((data) => {
@@ -14,15 +15,15 @@ const Comments = ({ data }) => {
             getComments(dataResult);
         })
 
-    }, [])
+    }, [newComment])
 
-    const phoneComments = comments.filter((comment) => comment.phone === data.name).reverse();
-    const commentList = phoneComments.map((comment) => <Comment commentInfo={comment} key={comment.id} />)
+    const phoneComments = useMemo(() => comments.filter((comment) => comment.phone === data.name).reverse(), [comments, data]);
+    const commentList = useMemo(() => phoneComments.map((comment) => <Comment commentInfo={comment} key={comment.id} />), [phoneComments])
 
     return (
         <article className='page-wrap'>
             <div className={style.container}>
-                <CreateComment phoneData={data} />
+                <CreateComment phoneData={data} newComment={newComment} getNewComment={getNewComment} />
                 <div>
                     {commentList}
                 </div>
@@ -32,4 +33,4 @@ const Comments = ({ data }) => {
     )
 }
 
-export default Comments;
+export default React.memo(Comments);

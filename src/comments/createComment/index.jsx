@@ -4,7 +4,7 @@ import { AuthContext } from '../../authentication/Auth';
 import style from './style.module.css';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 
-const CreateComment = ({ phoneData }) => {
+const CreateComment = ({ phoneData, newComment, getNewComment }) => {
     const { currentUser } = useContext(AuthContext);
     const [message, getMessage] = useState(undefined);
     const [error, getError] = useState('');
@@ -26,6 +26,7 @@ const CreateComment = ({ phoneData }) => {
 
                 await phoneService.createComment(data);
                 await getMessage(undefined);
+                getNewComment(newComment + 1);
             } catch (error) {
                 console.log(error);
             }

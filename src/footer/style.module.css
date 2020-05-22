@@ -1,0 +1,31 @@
+.footer-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+    border: 1px solid var(--light-gray);
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin: 1rem;
+}
+
+.logo p {
+    padding-bottom: 0;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.logo span {
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.text {
+    font-size: 1rem;
+}

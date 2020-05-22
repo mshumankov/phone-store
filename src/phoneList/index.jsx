@@ -25,4 +25,4 @@ const PhoneList = () => {
     )
 }
 
-export default PhoneList;
+export default React.memo(PhoneList);
