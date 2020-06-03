@@ -89,7 +89,7 @@ const Register = ({ history }) => {
                             </div>
                             <div className={form['form-control']}>
                                 <label>Repeat password:</label>
-                                <input type={rePasswordView} onChange={rePasword} />
+                                <input type={rePasswordView} name='rePassword' onChange={rePasword} />
                                 <span onClick={changeRePasswordView} >< FaEye /></span>
                             </div>
                             <div className={form['error-message']}>{viewError()}</div>

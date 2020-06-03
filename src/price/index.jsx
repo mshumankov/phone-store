@@ -15,6 +15,10 @@ const Price = (props) => {
         return price;
     }
 
+    if (!props.priceAll) {
+        return null;
+    }
+
     return (
         <Fragment>
             {props.priceMonth ? (

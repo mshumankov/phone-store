@@ -50,6 +50,11 @@ body {
   --light-gray: #efefef;
 }
 
+::selection {
+  color: #fff;
+  background-color: var(--primary);
+}
+
 body, td, th, form, textarea, input, option, select {
   font: inherit;
 }

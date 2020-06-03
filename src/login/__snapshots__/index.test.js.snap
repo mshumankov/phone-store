@@ -1,0 +1,727 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login component should render correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="logoin-container"
+  >
+    <section
+      className="logo-container"
+    >
+      <div
+        className="logo"
+      >
+        <span>
+          M
+        </span>
+        <h3>
+          22
+        </h3>
+      </div>
+    </section>
+    <section
+      className="form-wrap"
+    >
+      <article
+        className="form"
+      >
+        <form>
+          <h2>
+            Sign in to M22
+          </h2>
+          <div
+            className="form-control"
+          >
+            <label>
+              E-mail:
+            </label>
+            <input
+              name="email"
+              onChange={[Function]}
+              type="email"
+            />
+          </div>
+          <div
+            className="form-control"
+          >
+            <label>
+              Password:
+            </label>
+            <input
+              name="password"
+              onChange={[Function]}
+              type="password"
+            />
+            <span
+              onClick={[Function]}
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 576 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"
+                />
+              </svg>
+            </span>
+          </div>
+          <div
+            className="error-message"
+          />
+          <div
+            className="button-wrap"
+          >
+            <div
+              className="form-button"
+            >
+              <button
+                className="react-icons-btn-form"
+                onClick={[Function]}
+                type="button"
+              >
+                <span>
+                  Sign In
+                </span>
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  strokeWidth="0"
+                  style={
+                    Object {
+                      "color": undefined,
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              className="form-link"
+            >
+              <span>
+                Do you have an M22 account?
+              </span>
+              <Link
+                to="/register"
+              >
+                Sign up
+              </Link>
+            </div>
+          </div>
+        </form>
+        <div
+          className="app-header"
+        >
+          <h3>
+            Download the app
+          </h3>
+        </div>
+      </article>
+      <figure>
+        <img
+          alt="girlWithPhone"
+          src="girlWithPhone.jpg"
+        />
+        <ul
+          className="form-list"
+        >
+          <li>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+              />
+            </svg>
+            <span>
+              It is convenient!
+            </span>
+             Pay with credit or debit card through ePay as well.
+          </li>
+          <li>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+              />
+            </svg>
+            <span>
+              It's fast!
+            </span>
+             Everything happens in minutes
+          </li>
+          <li>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+              />
+            </svg>
+            <span>
+              It is secure!
+            </span>
+             The connection is fully secure.
+          </li>
+        </ul>
+      </figure>
+    </section>
+  </div>
+  <section
+    className="footer-wrap"
+  >
+    <div
+      className="logo"
+    >
+      <span>
+        M
+      </span>
+      <p>
+        22
+      </p>
+    </div>
+    <div
+      className="text"
+    >
+      Copyright © 2020 M22 Bulgaria
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Login component should render correctly when press button 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="logoin-container"
+  >
+    <section
+      className="logo-container"
+    >
+      <div
+        className="logo"
+      >
+        <span>
+          M
+        </span>
+        <h3>
+          22
+        </h3>
+      </div>
+    </section>
+    <section
+      className="form-wrap"
+    >
+      <article
+        className="form"
+      >
+        <form>
+          <h2>
+            Sign in to M22
+          </h2>
+          <div
+            className="form-control"
+          >
+            <label>
+              E-mail:
+            </label>
+            <input
+              name="email"
+              onChange={[Function]}
+              type="email"
+            />
+          </div>
+          <div
+            className="form-control"
+          >
+            <label>
+              Password:
+            </label>
+            <input
+              name="password"
+              onChange={[Function]}
+              type="password"
+            />
+            <span
+              onClick={[Function]}
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 576 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"
+                />
+              </svg>
+            </span>
+          </div>
+          <div
+            className="error-message"
+          />
+          <div
+            className="button-wrap"
+          >
+            <div
+              className="form-button"
+            >
+              <button
+                className="react-icons-btn-form"
+                onClick={[Function]}
+                type="button"
+              >
+                <span>
+                  Sign In
+                </span>
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  strokeWidth="0"
+                  style={
+                    Object {
+                      "color": undefined,
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              className="form-link"
+            >
+              <span>
+                Do you have an M22 account?
+              </span>
+              <Link
+                to="/register"
+              >
+                Sign up
+              </Link>
+            </div>
+          </div>
+        </form>
+        <div
+          className="app-header"
+        >
+          <h3>
+            Download the app
+          </h3>
+        </div>
+      </article>
+      <figure>
+        <img
+          alt="girlWithPhone"
+          src="girlWithPhone.jpg"
+        />
+        <ul
+          className="form-list"
+        >
+          <li>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+              />
+            </svg>
+            <span>
+              It is convenient!
+            </span>
+             Pay with credit or debit card through ePay as well.
+          </li>
+          <li>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+              />
+            </svg>
+            <span>
+              It's fast!
+            </span>
+             Everything happens in minutes
+          </li>
+          <li>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+              />
+            </svg>
+            <span>
+              It is secure!
+            </span>
+             The connection is fully secure.
+          </li>
+        </ul>
+      </figure>
+    </section>
+  </div>
+  <section
+    className="footer-wrap"
+  >
+    <div
+      className="logo"
+    >
+      <span>
+        M
+      </span>
+      <p>
+        22
+      </p>
+    </div>
+    <div
+      className="text"
+    >
+      Copyright © 2020 M22 Bulgaria
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Login component should render correctly when press button 2`] = `
+<div
+  className="container"
+>
+  <div
+    className="logoin-container"
+  >
+    <section
+      className="logo-container"
+    >
+      <div
+        className="logo"
+      >
+        <span>
+          M
+        </span>
+        <h3>
+          22
+        </h3>
+      </div>
+    </section>
+    <section
+      className="form-wrap"
+    >
+      <article
+        className="form"
+      >
+        <form>
+          <h2>
+            Sign in to M22
+          </h2>
+          <div
+            className="form-control"
+          >
+            <label>
+              E-mail:
+            </label>
+            <input
+              name="email"
+              onChange={[Function]}
+              type="email"
+            />
+          </div>
+          <div
+            className="form-control"
+          >
+            <label>
+              Password:
+            </label>
+            <input
+              name="password"
+              onChange={[Function]}
+              type="password"
+            />
+            <span
+              onClick={[Function]}
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 576 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"
+                />
+              </svg>
+            </span>
+          </div>
+          <div
+            className="error-message"
+          />
+          <div
+            className="button-wrap"
+          >
+            <div
+              className="form-button"
+            >
+              <button
+                className="react-icons-btn-form"
+                onClick={[Function]}
+                type="button"
+              >
+                <span>
+                  Sign In
+                </span>
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  strokeWidth="0"
+                  style={
+                    Object {
+                      "color": undefined,
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              className="form-link"
+            >
+              <span>
+                Do you have an M22 account?
+              </span>
+              <Link
+                to="/register"
+              >
+                Sign up
+              </Link>
+            </div>
+          </div>
+        </form>
+        <div
+          className="app-header"
+        >
+          <h3>
+            Download the app
+          </h3>
+        </div>
+      </article>
+      <figure>
+        <img
+          alt="girlWithPhone"
+          src="girlWithPhone.jpg"
+        />
+        <ul
+          className="form-list"
+        >
+          <li>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+              />
+            </svg>
+            <span>
+              It is convenient!
+            </span>
+             Pay with credit or debit card through ePay as well.
+          </li>
+          <li>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+              />
+            </svg>
+            <span>
+              It's fast!
+            </span>
+             Everything happens in minutes
+          </li>
+          <li>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+              />
+            </svg>
+            <span>
+              It is secure!
+            </span>
+             The connection is fully secure.
+          </li>
+        </ul>
+      </figure>
+    </section>
+  </div>
+  <section
+    className="footer-wrap"
+  >
+    <div
+      className="logo"
+    >
+      <span>
+        M
+      </span>
+      <p>
+        22
+      </p>
+    </div>
+    <div
+      className="text"
+    >
+      Copyright © 2020 M22 Bulgaria
+    </div>
+  </section>
+</div>
+`;

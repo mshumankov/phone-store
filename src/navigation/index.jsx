@@ -2,15 +2,15 @@ import React, { useContext } from 'react';
 import fire from '../config/fire';
 import { AuthContext } from '../authentication/Auth';
 import style from './style.module.css';
-import { withRouter } from "react-router";
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Logo from '../logo';
 
 
 
-const Navigation = ({ history }) => {
+const Navigation = () => {
 
     const { currentUser } = useContext(AuthContext);
+    const history = useHistory()
 
     const signOut = async () => {
         try {
@@ -64,4 +64,4 @@ const Navigation = ({ history }) => {
     )
 }
 
-export default withRouter(Navigation);
+export default Navigation;
