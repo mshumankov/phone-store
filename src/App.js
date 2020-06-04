@@ -17,13 +17,13 @@ function App() {
     <AuthProvider>
       <Router>
         <Switch>
-          <Route path='/' exact component={ProductList} />
-          <Route path='/phone/:id' exact component={ProductDetail} />
-          <ProtectedRoute path='/login' exact component={Login} />
-          <ProtectedRoute path='/register' exact component={Register} />
-          <Route path='/shoppingCart' exact component={ShoppingCart} />
-          <Route path='/aboutUs' exact component={AboutUs} />
-          <Route path='/compare' exact component={Compare} />
+          <Route path='/phone-store/' exact component={ProductList} />
+          <Route path='/phone-store/phone/:id' exact component={ProductDetail} />
+          <ProtectedRoute path='/phone-store/login' exact component={Login} />
+          <ProtectedRoute path='/phone-store/register' exact component={Register} />
+          <Route path='/phone-store/shoppingCart' exact component={ShoppingCart} />
+          <Route path='/phone-store/aboutUs' exact component={AboutUs} />
+          <Route path='/phone-store/compare' exact component={Compare} />
           <Route component={Error} />
         </Switch>
       </Router>
