@@ -77,3 +77,9 @@
     padding: 2rem 3rem;
     border: 2px solid white;
 }
+
+@media only screen and (max-width: 1560px) {
+    .section-wrap {
+        margin: 0 2rem;
+    }
+}

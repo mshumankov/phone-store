@@ -56,3 +56,9 @@
 .border {
     border-left: 1px solid var(--light-gray);
 }
+
+@media only screen and (max-width: 1560px) {
+    .contact {
+        margin: 0 2rem;
+    }
+}

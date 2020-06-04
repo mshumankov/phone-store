@@ -5,7 +5,7 @@ import Navigation from '../navigation/';
 import Footer from '../footer/';
 import Details from './details/';
 import Comments from '../comments';
-
+import style from './style.module.css';
 
 const ProductDetail = (props) => {
 
@@ -24,8 +24,10 @@ const ProductDetail = (props) => {
     return (
         currentPhone ? <Fragment>
             <Navigation />
-            <Details data={currentPhone} />
-            <Comments data={currentPhone} />
+            <section className={style.wrapper}>
+                <Details data={currentPhone} />
+                <Comments data={currentPhone} />
+            </section>
             <Footer />
         </Fragment>
             : <p>loading...</p>

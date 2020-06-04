@@ -111,22 +111,24 @@ const ShoppingCart = ({ history }) => {
                 </div>
             </section>
             <div className='page-wrap'>
-                <section className={style.header}>
-                    <h1>Shopping Cart</h1>
-                    <p>Browse your shopping cart and shop in 3 easy steps</p>
-                </section>
-                <section>{shoppingProducts}</section>
-                <section className={style.total}>
-                    <h4>Total amount per month: <span>${totalMonth()}</span></h4>
-                    <h4>Total one-time payment: <span>${totalPayment()}</span></h4>
-                    <p>Shipping: <span>${shipping.toFixed(2)}</span></p>
-                </section>
-                <section className={style['btn-wrap']}>
-                    <div className={style['btn-payment']}>
-                        <button className='react-icons-btn-form' onClick={buyProduct}>Buy with a one-time payment<AiOutlineShopping /></button>
-                        <button className='react-icons-btn-form' onClick={buyProduct}>Buy with a monthly payment<AiOutlineShopping /></button>
-                    </div>
-                </section>
+                <div className={style['section-wrap']}>
+                    <section className={style.header}>
+                        <h1>Shopping Cart</h1>
+                        <p>Browse your shopping cart and shop in 3 easy steps</p>
+                    </section>
+                    <section>{shoppingProducts}</section>
+                    <section className={style.total}>
+                        <h4>Total amount per month: <span>${totalMonth()}</span></h4>
+                        <h4>Total one-time payment: <span>${totalPayment()}</span></h4>
+                        <p>Shipping: <span>${shipping.toFixed(2)}</span></p>
+                    </section>
+                    <section className={style['btn-wrap']}>
+                        <div className={style['btn-payment']}>
+                            <button className='react-icons-btn-form' onClick={buyProduct}>Buy with a one-time payment<AiOutlineShopping /></button>
+                            <button className='react-icons-btn-form' onClick={buyProduct}>Buy with a monthly payment<AiOutlineShopping /></button>
+                        </div>
+                    </section>
+                </div>
             </div>
             <Footer />
         </Fragment>
