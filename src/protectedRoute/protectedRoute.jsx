@@ -11,7 +11,7 @@ const ProtectedRoute = ({ component: RouteComponent, ...rest }) => {
             render={routeProps => !currentUser ? (
                 <RouteComponent {...routeProps} />
             ) : (
-                    <Redirect to={'/'} />
+                    <Redirect to={'/phone-store/'} />
                 )
             }
         />

@@ -8,7 +8,7 @@ const PhoneCard = (props) => {
 
     return (
         <div className={style.card}>
-            <Link to={`/phone/${id}`}>
+            <Link to={`/phone-store/phone/${id}`}>
                 <figure>
                     <img src={image} alt='phone' />
                 </figure>

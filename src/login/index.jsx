@@ -41,7 +41,7 @@ const Login = ({ history }) => {
                 await fire
                     .auth()
                     .signInWithEmailAndPassword(emailFormControl.value, passwordFormControl.value);
-                history.push('/');
+                history.push('/phone-store/');
             } catch (error) {
                 console.log(error);;
             }
@@ -75,7 +75,7 @@ const Login = ({ history }) => {
                                 </div>
                                 <div className={form['form-link']}>
                                     <span>Do you have an M22 account?</span>
-                                    <Link to='/register'>Sign up</Link>
+                                    <Link to='/phone-store/register'>Sign up</Link>
                                 </div>
                             </div>
                         </form>

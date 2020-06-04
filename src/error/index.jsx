@@ -4,7 +4,7 @@ import './error.css';
 const Error = ({ history }) => {
 
     const toHome = () => {
-        history.push('/');
+        history.push('/phone-store/');
     }
 
     return (

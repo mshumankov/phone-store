@@ -25,7 +25,7 @@ const Details = ({ data }) => {
                     memory: data.memory
                 }
                 await phoneService.addShoppingCart(cartInfo);
-                await history.push('/');
+                await history.push('/phone-store/');
             } catch (error) {
                 console.log(error);
             }

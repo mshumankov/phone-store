@@ -90,7 +90,7 @@ const ShoppingCart = ({ history }) => {
             getRemoveProduct(undefined);
             changeSuccessMessage(true);
             setTimeout(() => {
-                history.push('/');
+                history.push('/phone-store/');
             }, 3000)
 
         } catch (error) {

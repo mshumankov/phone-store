@@ -15,7 +15,7 @@ const Navigation = () => {
     const signOut = async () => {
         try {
             await fire.auth().signOut();
-            history.push('/');
+            history.push('/phone-store/');
         } catch (error) {
             console.log(error);
         }
@@ -35,17 +35,17 @@ const Navigation = () => {
                         <Logo />
                     </div>
                     <ul>
-                        <li><Link to={'/'}>Smartphones</Link></li>
-                        <li><Link to={'/compare'}>Compare</Link></li>
-                        <li><Link to={'/aboutUs'}>About us</Link></li>
+                        <li><Link to={'/phone-store/'}>Smartphones</Link></li>
+                        <li><Link to={'/phone-store/compare'}>Compare</Link></li>
+                        <li><Link to={'/phone-store/aboutUs'}>About us</Link></li>
                         {!!currentUser ? (
-                            <li><Link to={'/shoppingCart'}>Shopping Cart</Link></li>
+                            <li><Link to={'/phone-store/shoppingCart'}>Shopping Cart</Link></li>
                         ) : null}
                         {!currentUser ? (
-                            <li><Link to={'/login'}>Sign in</Link></li>
+                            <li><Link to={'/phone-store/login'}>Sign in</Link></li>
                         ) : null}
                         {!currentUser ? (
-                            <li><Link to={'/register'}>Sign Up</Link></li>
+                            <li><Link to={'/phone-store/register'}>Sign Up</Link></li>
                         ) : null}
                         {!!currentUser ? (
                             <li><button onClick={signOut}>Sign out</button></li>

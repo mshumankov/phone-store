@@ -60,7 +60,7 @@ const Register = ({ history }) => {
                 await fire
                     .auth()
                     .createUserWithEmailAndPassword(emailFormControl.value, passwordFormControl.value);
-                history.push('/');
+                history.push('/phone-store/');
             } catch (error) {
                 console.log(error);;
             }
@@ -99,7 +99,7 @@ const Register = ({ history }) => {
                                 </div>
                                 <div className={form['form-link']}>
                                     <span>Already have an account?</span>
-                                    <Link to='/login'>Sign in</Link>
+                                    <Link to='/phone-store/login'>Sign in</Link>
                                 </div>
                             </div>
                         </form>

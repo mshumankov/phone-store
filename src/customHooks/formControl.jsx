@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const runControlValidation = (name, value, setValue, setError) => {
     if (name === 'email') {
