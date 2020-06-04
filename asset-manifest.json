@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/phone-store/static/css/main.cef6119f.chunk.css",
+    "main.js": "/phone-store/static/js/main.d8717abb.chunk.js",
+    "main.js.map": "/phone-store/static/js/main.d8717abb.chunk.js.map",
+    "runtime-main.js": "/phone-store/static/js/runtime-main.3432d1b2.js",
+    "runtime-main.js.map": "/phone-store/static/js/runtime-main.3432d1b2.js.map",
+    "static/js/2.6349427d.chunk.js": "/phone-store/static/js/2.6349427d.chunk.js",
+    "static/js/2.6349427d.chunk.js.map": "/phone-store/static/js/2.6349427d.chunk.js.map",
+    "index.html": "/phone-store/index.html",
+    "precache-manifest.6deb6552014c4ba222fc85a17b4f25c4.js": "/phone-store/precache-manifest.6deb6552014c4ba222fc85a17b4f25c4.js",
+    "service-worker.js": "/phone-store/service-worker.js",
+    "static/css/main.cef6119f.chunk.css.map": "/phone-store/static/css/main.cef6119f.chunk.css.map",
+    "static/js/2.6349427d.chunk.js.LICENSE.txt": "/phone-store/static/js/2.6349427d.chunk.js.LICENSE.txt",
+    "static/media/girlWithPhone.jpg": "/phone-store/static/media/girlWithPhone.3841baf9.jpg",
+    "static/media/girlWithPhone2.jpg": "/phone-store/static/media/girlWithPhone2.6f6ea2d8.jpg",
+    "static/media/style.module.css": "/phone-store/static/media/phoneNight.0f796641.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3432d1b2.js",
+    "static/js/2.6349427d.chunk.js",
+    "static/css/main.cef6119f.chunk.css",
+    "static/js/main.d8717abb.chunk.js"
+  ]
+}
