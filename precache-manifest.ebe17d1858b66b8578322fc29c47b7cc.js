@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d21db13e0f3908734f569a808d8975b4",
+    "revision": "93ead59218f08f659b6289c94e0301fe",
     "url": "/phone-store/index.html"
   },
   {
-    "revision": "e04be5999aa06098fe70",
-    "url": "/phone-store/static/css/main.cef6119f.chunk.css"
+    "revision": "efc850f130e5eda00d70",
+    "url": "/phone-store/static/css/main.0064f9ac.chunk.css"
   },
   {
-    "revision": "06dcffb2eb616d8f3117",
-    "url": "/phone-store/static/js/2.6349427d.chunk.js"
+    "revision": "688893e6c892ad479a62",
+    "url": "/phone-store/static/js/2.e084dc76.chunk.js"
   },
   {
     "revision": "8736c11eb14375cf022a7311cd089c7a",
-    "url": "/phone-store/static/js/2.6349427d.chunk.js.LICENSE.txt"
+    "url": "/phone-store/static/js/2.e084dc76.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e04be5999aa06098fe70",
-    "url": "/phone-store/static/js/main.d8717abb.chunk.js"
+    "revision": "efc850f130e5eda00d70",
+    "url": "/phone-store/static/js/main.9a1768c8.chunk.js"
   },
   {
     "revision": "fe511d2306ebdf4e04fe",
