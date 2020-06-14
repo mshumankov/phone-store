@@ -13,6 +13,7 @@ const ShoppingCart = ({ history }) => {
     const [shoppingCartData, getShoppingCartData] = useState([]);
     const [removeProduct, getRemoveProduct] = useState('');
     const [succesMessage, changeSuccessMessage] = useState(false);
+    const [errorMessage, showError] = useState('');
 
     const { currentUser } = useContext(AuthContext);
     const shipping = 6;
@@ -59,48 +60,54 @@ const ShoppingCart = ({ history }) => {
     }, [userProducts])
 
     const buyProduct = useCallback(async (ev) => {
-        const btnText = ev.currentTarget.textContent
-        let monthlyPayment;
-        let data;
 
-        if (btnText === 'Buy buy with a one-time payment') {
-            monthlyPayment = false;
-            data = {
-                products: userProducts,
-                user: currentUser.email,
-                monthlyPayment,
-                price: totalPayment()
+        if (userProducts.length) {
+            const btnText = ev.currentTarget.textContent
+            let monthlyPayment;
+            let data;
+
+            if (btnText === 'Buy buy with a one-time payment') {
+                monthlyPayment = false;
+                data = {
+                    products: userProducts,
+                    user: currentUser.email,
+                    monthlyPayment,
+                    price: totalPayment()
+                }
+            } else {
+                monthlyPayment = true;
+                data = {
+                    products: userProducts,
+                    user: currentUser.email,
+                    monthlyPayment,
+                    price: totalMonth()
+                }
+            }
+
+            try {
+                await phoneService.addShoppingOrder(data);
+
+                for (const product of userProducts) {
+                    await phoneService.removeShoppingCartProduct(product.id);
+                }
+                getRemoveProduct(undefined);
+                changeSuccessMessage(true);
+                setTimeout(() => {
+                    history.push('/phone-store/');
+                }, 3000)
+
+            } catch (error) {
+                console.log(error);
             }
         } else {
-            monthlyPayment = true;
-            data = {
-                products: userProducts,
-                user: currentUser.email,
-                monthlyPayment,
-                price: totalMonth()
-            }
+            showError('Empty shopping cart. Please add product to shopping cart');
         }
 
-        try {
-            await phoneService.addShoppingOrder(data);
-
-            for (const product of userProducts) {
-                await phoneService.removeShoppingCartProduct(product.id);
-            }
-            getRemoveProduct(undefined);
-            changeSuccessMessage(true);
-            setTimeout(() => {
-                history.push('/phone-store/');
-            }, 3000)
-
-        } catch (error) {
-            console.log(error);
-        }
     }, [totalMonth, totalPayment, userProducts, currentUser, history])
 
     return (
         <Fragment>
-            <section className={style['success-message']} style={succesMessage ? { display: 'flex' } : { display: 'none' }}>
+            <section className={succesMessage ? style['success-message-visible'] : style['success-message-hidden']}>
                 <p>Your order is successful</p>
             </section>
             <Navigation />
@@ -122,6 +129,9 @@ const ShoppingCart = ({ history }) => {
                         <h4>Total one-time payment: <span>${totalPayment()}</span></h4>
                         <p>Shipping: <span>${shipping.toFixed(2)}</span></p>
                     </section>
+                    <div className={style.error}>
+                        <p>{errorMessage}</p>
+                    </div>
                     <section className={style['btn-wrap']}>
                         <div className={style['btn-payment']}>
                             <button className='react-icons-btn-form' onClick={buyProduct}>Buy with a one-time payment<AiOutlineShopping /></button>

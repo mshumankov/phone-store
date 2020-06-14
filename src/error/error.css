@@ -141,7 +141,7 @@
 
 @keyframes movecloudsStart {
     0% {
-        left: 95vw;
+        left: 70vw;
     }
     100% {
         left: 10vw;
@@ -154,5 +154,68 @@
     }
     100% {
         left: -10vw;
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+    .x4 {
+        display: none;
+    }
+    .x3 {
+        display: none;
+    }
+    .x5 {
+        display: none;
+    }
+    .x1_5 {
+        top: -2vh;
+    }
+    .x6 {
+        top: 50vh;
+    }
+    @keyframes movecloudsMiddle {
+        0% {
+            left: 55vw;
+        }
+        100% {
+            left: -20vw;
+        }
+    }
+    @keyframes movecloudsStart {
+        0% {
+            left: 65vw;
+        }
+        100% {
+            left: 0vw;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    ._404 {
+        font-size: 9rem;
+        letter-spacing: 12px;
+    }
+    ._1 {
+        letter-spacing: 9px;
+        font-size: 3rem;
+    }
+    .btn {
+        font-size: 1.4rem;
+        width: 17.5rem;
+    }
+    .x6 {
+        top: 64vh;
+    }
+    @keyframes movecloudsStart {
+        0% {
+            left: 45vw;
+        }
+        50% {
+            left: 0vw;
+        }
+        100% {
+            left: 45vw;
+        }
     }
 }

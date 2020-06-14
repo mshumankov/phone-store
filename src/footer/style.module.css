@@ -29,3 +29,14 @@
 .text {
     font-size: 1rem;
 }
+
+.text a {
+    color: var(--primary);
+}
+
+.logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: baseline;
+    color: rgb(75, 75, 75);
+}

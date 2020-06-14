@@ -61,3 +61,13 @@
 .payment-wrap div p:last-child span {
     font-size: 1rem;
 }
+
+@media only screen and (max-width: 1085px) {
+    .product-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-wrap {
+        margin-bottom: 2rem;
+    }
+}

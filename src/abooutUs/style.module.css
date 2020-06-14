@@ -62,3 +62,32 @@
         margin: 0 2rem;
     }
 }
+
+@media only screen and (max-width: 1080px) {
+    .about-info div {
+        padding: 1rem 3rem;
+    }
+    .contact article {
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .about-info {
+        flex-direction: column;
+    }
+    .contact div {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 516px) {
+    .contact article {
+        border-bottom: 1px solid var(--light-gray);
+        border-left: none;
+        max-width: none;
+    }
+    .contact div {
+        justify-content: flex-start;
+    }
+}

@@ -13,7 +13,9 @@ const PhoneCard = (props) => {
                     <img src={image} alt='phone' />
                 </figure>
             </Link>
-            <h4>{props.phoneInfo.name}</h4>
+            <Link to={`/phone-store/phone/${id}`}>
+                <h4>{props.phoneInfo.name}</h4>
+            </Link>
             <div>Price: <Price priceAll={price} /></div>
         </div>
     )

@@ -16,6 +16,7 @@ const Login = ({ history }) => {
     const [passwordView, changePassword] = useState('password');
     const emailFormControl = useFormControl();
     const passwordFormControl = useFormControl();
+    const [errorRes, showErrorRes] = useState('')
 
     const changePasswordView = () => {
         if (passwordView === 'password') {
@@ -43,7 +44,8 @@ const Login = ({ history }) => {
                     .signInWithEmailAndPassword(emailFormControl.value, passwordFormControl.value);
                 history.push('/phone-store/');
             } catch (error) {
-                console.log(error);;
+                showErrorRes(error.message);
+                console.log(error.message);
             }
         }
     }
@@ -78,6 +80,7 @@ const Login = ({ history }) => {
                                     <Link to='/phone-store/register'>Sign up</Link>
                                 </div>
                             </div>
+                            <div className={form['error-message-res']}>{errorRes}</div>
                         </form>
                         <div className={form['app-header']}>
                             <h3>Download the app</h3>

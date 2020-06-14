@@ -99,7 +99,7 @@ const Error = () => {
                         <div className={style.category}></div>
                         <div className={style.data}>
                             <div className={style.search}>
-                                <div className={style['serch-input']}>
+                                <div className={style['search-input']}>
                                     <label>Compare with</label>
                                     <input type="text" placeholder='Please enter model name' onChange={(e) => choosePhone(e, loadFirstListStyle, getFirstPhone, loadFirstPhone)} />
                                 </div>
@@ -108,7 +108,7 @@ const Error = () => {
                                 </div>
                             </div>
                             <div className={style.search}>
-                                <div className={style['serch-input']}>
+                                <div className={style['search-input']}>
                                     <label>Compare with;</label>
                                     <input type="text" placeholder='Please enter model name' onChange={(e) => choosePhone(e, loadSecondListStyle, getSecondPhone, loadSecondPhone)} />
                                 </div>
@@ -117,7 +117,7 @@ const Error = () => {
                                 </div>
                             </div>
                             <div className={style.search}>
-                                <div className={style['serch-input']}>
+                                <div className={style['search-input']}>
                                     <label>Compare with;</label>
                                     <input type="text" placeholder='Please enter model name' onChange={(e) => choosePhone(e, loadThirdListStyle, getThirdPhone, loadThirdPhone)} />
                                 </div>

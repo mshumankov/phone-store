@@ -27,3 +27,7 @@
 .message {
     margin-top: 1rem
 }
+
+.container p {
+    padding-bottom: 0;
+}

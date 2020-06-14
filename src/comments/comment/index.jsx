@@ -15,7 +15,9 @@ const Comment = (props) => {
                 </div>
                 <div className={style.username}>{username}</div>
             </div>
-            <div className={style.message}>{message}</div>
+            <div className={style.message}>
+                <p>{message}</p>
+            </div>
         </div>
 
     )
