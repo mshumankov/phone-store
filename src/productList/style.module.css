@@ -34,3 +34,10 @@
 .picture-3 {
     background: url('../images/phoneHand3.jpg');
 }
+
+@media only screen and (max-width: 450px) {
+    .home-presentation div div {
+        margin: auto;
+        padding: 1rem 1rem;
+    }
+}

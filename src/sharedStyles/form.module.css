@@ -155,6 +155,7 @@
     }
     .form form {
         width: 22rem;
+        padding: 0 1rem;
     }
     .app-header {
         width: 100%;
@@ -162,5 +163,16 @@
     }
     .form-wrap figure {
         width: 100%;
+        padding: 0 2rem;
+        border-left: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .form form {
+        width: 19rem;
+    }
+    .form-wrap figure {
+        padding: 0 1rem;
     }
 }

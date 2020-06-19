@@ -155,7 +155,7 @@ exports[`Register component should render correctly 1`] = `
                 Already have an account?
               </span>
               <Link
-                to="/login"
+                to="/phone-store/login"
               >
                 Sign in
               </Link>
@@ -260,17 +260,26 @@ exports[`Register component should render correctly 1`] = `
     <div
       className="logo"
     >
-      <span>
-        M
-      </span>
-      <p>
-        22
-      </p>
+      <Link
+        to="/phone-store/"
+      >
+        <span>
+          M
+        </span>
+        <p>
+          22
+        </p>
+      </Link>
     </div>
     <div
       className="text"
     >
-      Copyright © 2020 M22 Bulgaria
+      Copyright © 2020 M22 
+      <Link
+        to="/phone-store/404"
+      >
+        404
+      </Link>
     </div>
   </section>
 </div>
@@ -431,7 +440,7 @@ exports[`Register component should render correctly when press button 1`] = `
                 Already have an account?
               </span>
               <Link
-                to="/login"
+                to="/phone-store/login"
               >
                 Sign in
               </Link>
@@ -536,17 +545,26 @@ exports[`Register component should render correctly when press button 1`] = `
     <div
       className="logo"
     >
-      <span>
-        M
-      </span>
-      <p>
-        22
-      </p>
+      <Link
+        to="/phone-store/"
+      >
+        <span>
+          M
+        </span>
+        <p>
+          22
+        </p>
+      </Link>
     </div>
     <div
       className="text"
     >
-      Copyright © 2020 M22 Bulgaria
+      Copyright © 2020 M22 
+      <Link
+        to="/phone-store/404"
+      >
+        404
+      </Link>
     </div>
   </section>
 </div>
@@ -707,7 +725,7 @@ exports[`Register component should render correctly when press button 2`] = `
                 Already have an account?
               </span>
               <Link
-                to="/login"
+                to="/phone-store/login"
               >
                 Sign in
               </Link>
@@ -812,17 +830,26 @@ exports[`Register component should render correctly when press button 2`] = `
     <div
       className="logo"
     >
-      <span>
-        M
-      </span>
-      <p>
-        22
-      </p>
+      <Link
+        to="/phone-store/"
+      >
+        <span>
+          M
+        </span>
+        <p>
+          22
+        </p>
+      </Link>
     </div>
     <div
       className="text"
     >
-      Copyright © 2020 M22 Bulgaria
+      Copyright © 2020 M22 
+      <Link
+        to="/phone-store/404"
+      >
+        404
+      </Link>
     </div>
   </section>
 </div>

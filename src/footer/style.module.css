@@ -40,3 +40,9 @@
     align-items: baseline;
     color: rgb(75, 75, 75);
 }
+
+@media only screen and (max-width: 650px) {
+    .footer-wrap {
+        padding: 0;
+    }
+}

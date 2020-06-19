@@ -62,6 +62,7 @@
 .success-message-hidden {
     visibility: hidden;
     opacity: 0;
+    position: absolute;
 }
 
 .success-message-visible p {
@@ -81,7 +82,7 @@
     width: 100%;
     height: 100%;
     z-index: 2;
-    transition: all 500ms cubic-bezier(.215, .61, .355, 1);
+    transition: all 900ms cubic-bezier(.215, .61, .355, 1);
 }
 
 .error {
@@ -93,5 +94,20 @@
 @media only screen and (max-width: 1560px) {
     .section-wrap {
         margin: 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .btn-payment button {
+        margin: 1rem;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .btn-payment button {
+        margin: 1rem 0;
+    }
+    .total {
+        align-items: flex-start;
     }
 }

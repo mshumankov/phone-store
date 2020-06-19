@@ -71,3 +71,19 @@
         margin-bottom: 2rem;
     }
 }
+
+@media only screen and (max-width: 465px) {
+    .payment-wrap>div:nth-child(1) {
+        padding: 0 1rem 0 0;
+    }
+    .payment-wrap>div:nth-child(2) {
+        padding: 0 0 0 1rem;
+    }
+    .image-wrap figcaption {
+        margin: 0.5rem 0;
+    }
+    .image-wrap div {
+        max-width: 11rem;
+        padding-right: 1rem;
+    }
+}

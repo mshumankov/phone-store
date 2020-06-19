@@ -246,17 +246,38 @@ div.wrap {
     line-height: 34px;
 }
 
+.basket-big {
+    color: var(--primary);
+    vertical-align: sub;
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.basket-small {
+    vertical-align: sub;
+    margin-left: 0.6rem;
+    font-size: 1.9rem;
+}
+
 @media only screen and (max-width: 1300px) {
     .nav-big a, .nav-big button {
         padding: 1rem 1rem;
     }
 }
 
-@media only screen and (max-width: 1110px) {
+@media only screen and (max-width: 1130px) {
     .nav-big {
         display: none;
     }
     .nav-content-small {
         display: flex;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .logo-wrap {
+        padding: 0.3em 0.9em;
+        border: 2px solid var(--light-gray);
+        border-bottom: none;
     }
 }

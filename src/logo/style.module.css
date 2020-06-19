@@ -9,3 +9,12 @@
     font-family: 'Ubuntu';
     display: inline-block;
 }
+
+@media only screen and (max-width: 650px) {
+    .logo span {
+        font-size: 2.5em;
+    }
+    .logo h3 {
+        font-size: 1.25em;
+    }
+}

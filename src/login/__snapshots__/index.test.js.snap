@@ -121,11 +121,16 @@ exports[`Login component should render correctly 1`] = `
                 Do you have an M22 account?
               </span>
               <Link
-                to="/register"
+                to="/phone-store/register"
               >
                 Sign up
               </Link>
             </div>
+          </div>
+          <div
+            className="error-message-res"
+          >
+            
           </div>
         </form>
         <div
@@ -226,17 +231,26 @@ exports[`Login component should render correctly 1`] = `
     <div
       className="logo"
     >
-      <span>
-        M
-      </span>
-      <p>
-        22
-      </p>
+      <Link
+        to="/phone-store/"
+      >
+        <span>
+          M
+        </span>
+        <p>
+          22
+        </p>
+      </Link>
     </div>
     <div
       className="text"
     >
-      Copyright © 2020 M22 Bulgaria
+      Copyright © 2020 M22 
+      <Link
+        to="/phone-store/404"
+      >
+        404
+      </Link>
     </div>
   </section>
 </div>
@@ -363,11 +377,16 @@ exports[`Login component should render correctly when press button 1`] = `
                 Do you have an M22 account?
               </span>
               <Link
-                to="/register"
+                to="/phone-store/register"
               >
                 Sign up
               </Link>
             </div>
+          </div>
+          <div
+            className="error-message-res"
+          >
+            
           </div>
         </form>
         <div
@@ -468,17 +487,26 @@ exports[`Login component should render correctly when press button 1`] = `
     <div
       className="logo"
     >
-      <span>
-        M
-      </span>
-      <p>
-        22
-      </p>
+      <Link
+        to="/phone-store/"
+      >
+        <span>
+          M
+        </span>
+        <p>
+          22
+        </p>
+      </Link>
     </div>
     <div
       className="text"
     >
-      Copyright © 2020 M22 Bulgaria
+      Copyright © 2020 M22 
+      <Link
+        to="/phone-store/404"
+      >
+        404
+      </Link>
     </div>
   </section>
 </div>
@@ -605,11 +633,16 @@ exports[`Login component should render correctly when press button 2`] = `
                 Do you have an M22 account?
               </span>
               <Link
-                to="/register"
+                to="/phone-store/register"
               >
                 Sign up
               </Link>
             </div>
+          </div>
+          <div
+            className="error-message-res"
+          >
+            
           </div>
         </form>
         <div
@@ -710,17 +743,26 @@ exports[`Login component should render correctly when press button 2`] = `
     <div
       className="logo"
     >
-      <span>
-        M
-      </span>
-      <p>
-        22
-      </p>
+      <Link
+        to="/phone-store/"
+      >
+        <span>
+          M
+        </span>
+        <p>
+          22
+        </p>
+      </Link>
     </div>
     <div
       className="text"
     >
-      Copyright © 2020 M22 Bulgaria
+      Copyright © 2020 M22 
+      <Link
+        to="/phone-store/404"
+      >
+        404
+      </Link>
     </div>
   </section>
 </div>

@@ -91,3 +91,12 @@
         justify-content: flex-start;
     }
 }
+
+@media only screen and (max-width: 416px) {
+    .about-info div {
+        padding: 1rem 2rem;
+    }
+    .contact article {
+        padding: 1rem 0;
+    }
+}

@@ -5,6 +5,7 @@ import Navigation from '../navigation/';
 import Footer from '../footer/';
 import Details from './details/';
 import Comments from '../comments';
+import Spinner from '../spinner';
 import style from './style.module.css';
 
 const ProductDetail = (props) => {
@@ -30,7 +31,7 @@ const ProductDetail = (props) => {
             </section>
             <Footer />
         </Fragment>
-            : <p>loading...</p>
+            : <Spinner />
     )
 
 }

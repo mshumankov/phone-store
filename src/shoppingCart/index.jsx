@@ -94,7 +94,7 @@ const ShoppingCart = ({ history }) => {
                 changeSuccessMessage(true);
                 setTimeout(() => {
                     history.push('/phone-store/');
-                }, 3000)
+                }, 5000)
 
             } catch (error) {
                 console.log(error);
@@ -134,8 +134,8 @@ const ShoppingCart = ({ history }) => {
                     </div>
                     <section className={style['btn-wrap']}>
                         <div className={style['btn-payment']}>
-                            <button className='react-icons-btn-form' onClick={buyProduct}>Buy with a one-time payment<AiOutlineShopping /></button>
-                            <button className='react-icons-btn-form' onClick={buyProduct}>Buy with a monthly payment<AiOutlineShopping /></button>
+                            <button className='react-icons-btn-form' onClick={buyProduct}>One-time payment<AiOutlineShopping /></button>
+                            <button className='react-icons-btn-form' onClick={buyProduct}>Monthly payment<AiOutlineShopping /></button>
                         </div>
                     </section>
                 </div>

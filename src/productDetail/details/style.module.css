@@ -119,4 +119,13 @@
         left: 0px;
         top: -9px;
     }
+    .description {
+        padding: 0;
+    }
+    .perMonth {
+        padding-right: 1rem;
+    }
+    .priceYear {
+        padding-left: 1rem;
+    }
 }

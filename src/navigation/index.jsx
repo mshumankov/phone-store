@@ -3,6 +3,8 @@ import fire from '../config/fire';
 import { AuthContext } from '../authentication/Auth';
 import style from './style.module.css';
 import { Link, useHistory } from 'react-router-dom';
+import { MdShoppingCart } from 'react-icons/md';
+import '.././index.css';
 import Logo from '../logo';
 
 
@@ -50,7 +52,7 @@ const Navigation = () => {
                             <li><Link to={'/phone-store/compare'}>Compare</Link></li>
                             <li><Link to={'/phone-store/aboutUs'}>About us</Link></li>
                             {!!currentUser ? (
-                                <li><Link to={'/phone-store/shoppingCart'}>Shopping Cart</Link></li>
+                                <li ><Link to={'/phone-store/shoppingCart'} ><span>Shopping Cart</span><MdShoppingCart className={style['basket-big']} /></Link></li>
                             ) : null}
                             {!currentUser ? (
                                 <li><Link to={'/phone-store/login'}>Sign in</Link></li>
@@ -92,7 +94,7 @@ const Navigation = () => {
                                 <li><Link to={'/phone-store/compare'}>Compare</Link></li>
                                 <li><Link to={'/phone-store/aboutUs'}>About us</Link></li>
                                 {!!currentUser ? (
-                                    <li><Link to={'/phone-store/shoppingCart'}>Shopping Cart</Link></li>
+                                    <li><Link to={'/phone-store/shoppingCart'} ><span>Shopping Cart</span><MdShoppingCart className={style['basket-small']} /></Link></li>
                                 ) : null}
                                 {!currentUser ? (
                                     <li><Link to={'/phone-store/login'}>Sign in</Link></li>

@@ -187,3 +187,19 @@
         width: 100%;
     }
 }
+
+@media only screen and (max-width: 650px) {
+    .compare-wrap {
+        flex-direction: column;
+    }
+    .category {
+        width: 100%;
+        margin-top: 1rem;
+        padding-left: 0.5rem;
+    }
+    .data {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
