@@ -203,7 +203,7 @@ div.wrap {
     border-radius: 50%;
     transition: all .4s ease;
     transition-duration: 2.75s;
-    transform: scale(1);
+    transform: scale(1.2);
     backface-visibility: hidden;
     display: flex;
     align-items: center;
@@ -220,7 +220,7 @@ div.wrap {
 
 .menu-clicked a, .menu-clicked button {
     display: block;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-decoration: none;
     padding: 0.4rem;
     color: white;
@@ -259,7 +259,7 @@ div.wrap {
     font-size: 1.9rem;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1328px) {
     .nav-big a, .nav-big button {
         padding: 1rem 1rem;
     }
